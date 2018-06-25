@@ -1,10 +1,12 @@
 # RemoteSave4WordpressContainer
-Bash script for automated save of a wordpress container's files
 
-These scripts allow the user to save a wordpress container html folder and the mysql database linked with a dump
+Bash script for automated save of a wordpress container's backups / plugin: all in one wordpress migration / wp-cli
 
-client-save.sh: connect to the ssh server and start the server-save.sh
+These scripts allow the user to save a wordpress container backups 
+---
 
-server-save.sh: get datas from the containers
+* ssh-save-initiator.sh: connect to the ssh server and start the sdc-save-onserver.sh
 
-client-pull.sh: download datas with with scp on the client
+* sdc-save-onserver.sh: script on distant server launch backup on container and copy it on server
+
+* client-pull-save.sh: download the backup file and keep a limited number of backup in the file
